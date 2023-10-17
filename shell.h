@@ -181,7 +181,7 @@ int _myhistory(info_t *info);
 int _myalias(info_t *info);
 int print_alias(list_t *node);
 int set_alias(info_t *info, char *str);
-int unset_alias(info_t *info, char *str)
+int unset_alias(info_t *info, char *str);
 
 /* getLine4.c */
 int _getline(info_t *, char **, size_t *);
