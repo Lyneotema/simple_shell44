@@ -19,8 +19,7 @@ char **strtow(char *str, char *delimiters)
         delimiters = " ";
 
     for (i = 0; str[i] != '\0'; i++)
-        if (!is_delimiter(str[i], delimiters) && (is_delimiter(str[i + 1], delimiters) || str[i + 1] == '\0'))
-            num_words++;
+       if (!is_delim(str[i], delimiters) && (is_delim(str[i + 1], delimiters) || str[i + 1] == '\0'));
 
     if (num_words == 0)
         return (NULL);
