@@ -12,7 +12,7 @@ int my_exit(info_t *info)
 
 	if (info->argc > 1) /* If there is an argument after "exit" */
 	{
-		exit_status = _err_atoi(info->argv[1]);
+		exit_status = _erratoi(info->argv[1]);
 		if (exit_status == -1)
 		{
 			info->status = 2;
