@@ -109,46 +109,46 @@ typedef struct builtin
 } builtin_table;
 
 
-/* _shell_loop.c */
-int find_builtin(info_t *);
-void find_cmd(info_t *);
-int hsh(info_t *, char **);
-void fork_cmd(info_t *);
+/* 100-shell_loop.c */
+int find_builtin(info_t *info);
+void find_command(info_t *info);
+int hsh(info_t *info, char **av);
+void fork_command(info_t *info);
 
-/* parsi_n.c */
-char *dup_chars(char *, int, int);
-int is_cmd(info_t *, char *);
-char *find_path(info_t *, char *, char *);
+/* 7-parser.c */
+char *duplicate_chars(char *path, int start, int stop);
+int is_command(info_t *info, char *path);
+char *find_command_in_path(info_t *info, char *path_str, char *command);
 
 /* hsh.c */
 int loophsh(char **);
 
-/* _errors.c */
-int _eputchar(char);
+/* 5-errors.c */
+int _eputchar(char c);
 int _putfd(char c, int fd);
-void _eputs(char *);
+void _eputs(char *str);
 int _putsfd(char *str, int fd);
 
-/* sstring_g.c */
-int _strcmp(char *, char *);
-char *starts_with(const char *, const char *);
-int _strlen(char *);
-char *_strcat(char *, char *);
+/* 102-string_1.c */
+int string_compare(char *s1, char *s2);
+char *starts_with(const char *haystack, const char *needle);
+int string_length(char *s);
+char *string_concatenate(char *dest, char *src);
 
-/* string_0.c */
-char *_strdup(const char *);
-void _puts(char *);
-char *_strcpy(char *, char *);
-int _putchar(char);
+/* 101-string.c */
+char *_strdup(const char *str);
+void _puts(char *str);
+char *_strcpy(char *dest, char *src);
+int _putchar(char c);
 
 /* exits4.c */
 char *_strncat(char *, char *, int);
 char *_strncpy(char *, char *, int);
 char *_strchr(char *, char);
 
-/* token_izer.c */
-char **strtow(char *, char *);
-char **strtow2(char *, char);
+/* 8-tokenizer.c */
+char **strtow(char *str, char *delimiters);
+
 
 /* realloc4.c */
 void ffree(char **);
@@ -158,27 +158,30 @@ void *_realloc(void *, unsigned int, unsigned int);
 /* memory4.c */
 int bfree(void **);
 
-/* atoi_ic.c */
-int is_delim(char, char *);
-int _isalpha(int);
-int interactive(info_t *);
-int _atoi(char *);
+/* 1-atoic.c */
+int is_delim(char c, char *delim);
+int _isalpha(int c);
+int is_interactive(info_t *info);
+int _atoi(char *s);
 
-/* errors_0.c */
-int _erratoi(char *);
-int print_d(int, int);
-char *convert_number(long int, int, int);
-void print_error(info_t *, char *);
-void remove_comments(char *);
+/* 6-errors_1.c */
+int _erratoi(char *s);
+int print_d(int input, int fd);
+char *convert_number(long int num, int base, int flags);
+void print_error(info_t *info, char *estr);
+void remove_comments(char *buf);
 
-/* built_in.c */
-int _mycd(info_t *);
-int _myexit(info_t *);
-int _myhelp(info_t *);
+/* 2-builtin.c */
+int _mycd(info_t *info);
+int _myexit(info_t *info);
+int _myhelp(info_t *info);
 
-/* Built_in0.c */
-int _myhistory(info_t *);
-int _myalias(info_t *);
+/* 3-builtin_1.c */
+int _myhistory(info_t *info);
+int _myalias(info_t *info);
+int print_alias(list_t *node);
+int set_alias(info_t *info, char *str);
+int unset_alias(info_t *info, char *str)
 
 /* getLine4.c */
 int _getline(info_t *, char **, size_t *);
@@ -190,12 +193,12 @@ void set_info(info_t *, char **);
 void clear_info(info_t *);
 void free_info(info_t *, int);
 
-/* _envi_ron.c */
-int _mysetenv(info_t *);
-int _myunsetenv(info_t *);
-char *_getenv(info_t *, const char *);
-int _myenv(info_t *);
-int populate_env_list(info_t *);
+/* 4-environ.c */
+int _mysetenv(info_t *info);
+int _myunsetenv(info_t *info);
+char *_getenv(info_t *info, const char *name);
+int _myenv(info_t *info);
+int populate_env_list(info_t *info);
 
 /* getenv4.c */
 int _unsetenv(info_t *, char *);
