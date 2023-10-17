@@ -68,11 +68,11 @@ char *find_command_in_path(info_t *info, char *path_str, char *command)
 		{
 			path = duplicate_chars(path_str, curr_pos, i);
 			if (!*path)
-				_strcat(path, command);
+				_strncat(path, command, sizeof(path) - strlen(path) - 1);
 			else
 			{
-				_strcat(path, "/");
-				_strcat(path, command);
+				_strncat(path, "/");
+				_strncat(path, command, sizeof(path) - strlen(path) - 1);
 			}
 			if (is_command(info, path))
 				return (path);
