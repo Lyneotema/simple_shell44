@@ -1,25 +1,26 @@
 #include "shell.h"
 /**
  **_strncpy - cp. string
- *@dest: The destination to cp string to
+ *@dest: The Destination to cp String into
  *@src: Source String
- *@n: the no. of chars to be copied
- *Return: Concatenated String
+ *
+ *@n: No. of chars to be Copied
+ *Return: Concatenated string
  */
 char *_strncpy(char *dest, char *src, int n)
 {
-	int m, j;
+	int z, j;
 	char *s = dest;
 
-	m = 0;
-	while (src[m] != '\0' && m < n - 1)
+	z = 0;
+	while (src[z] != '\0' && z < n - 1)
 	{
-		dest[m] = src[m];
-		m++;
+		dest[z] = src[z];
+		z++;
 	}
-	if (m < n)
+	if (z < n)
 	{
-		j = m;
+		j = z;
 		while (j < n)
 		{
 			dest[j] = '\0';
@@ -31,36 +32,36 @@ char *_strncpy(char *dest, char *src, int n)
 
 /**
  **_strncat - Concatenates 2 strings
- *@dest: 1st. String
- *@src: 2nd. String
- *@n: no. of bytes to maximally use
+ *@dest: 1st. String.
+ *@src: 2nd. String.
+ *@n: No. of Bytes to Maximally use
  *Return: Concatenated String
  */
 char *_strncat(char *dest, char *src, int n)
 {
-	int m, j;
+	int z, j;
 	char *s = dest;
 
-	m = 0;
+	z = 0;
 	j = 0;
-	while (dest[m] != '\0')
-		m++;
+	while (dest[z] != '\0')
+		z++;
 	while (src[j] != '\0' && j < n)
 	{
-		dest[m] = src[j];
-		m++;
+		dest[z] = src[j];
+		z++;
 		j++;
 	}
 	if (j < n)
-		dest[m] = '\0';
+		dest[z] = '\0';
 	return (s);
 }
 
 /**
- **_strchr - Finds a char in string
- *@s: the string to pass.
- *@c: Char being looked for
- *Return: (s) an address to mem. area s
+ **_strchr - Finds A char in String.
+ *@s: String to Pass.
+ *@c: Char being looked For.
+ *Return: (s) Pointer to mem. area s
  */
 char *_strchr(char *s, char c)
 {
