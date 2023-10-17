@@ -71,8 +71,8 @@ int _myunsetenv(info_t *info)
 }
 
 /**
- * populate_env_list - Populates the environment linked list from the environ array.
- * @info: A structure containing arguments and ensuring consistent function prototypes.
+ * populate_env_list - Populates linked list from the environ array.
+ * @info: structure containing arguments and function prototypes.
  * Return: Always 0.
  **/
 int populate_env_list(info_t *info)
