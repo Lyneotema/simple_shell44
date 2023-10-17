@@ -85,6 +85,6 @@ char *string_concatenate(char *dest, char *src)
 
 	*dest = *src;
 
-	return result;
+	return (result);
 }
 
