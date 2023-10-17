@@ -82,7 +82,7 @@ int print_d(int input, int fd)
 }
 
 /**
- * convert_number - Convert a number to a string representation 
+ * convert_number - Convert a number to a string representation.
  * @num: The number to convert
  * @base: The base for conversion
  * @flags: Flags for formatting
