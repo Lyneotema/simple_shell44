@@ -123,7 +123,7 @@ char *find_path(info_t *, char *, char *);
 /* hsh.c */
 int loophsh(char **);
 
-/* 6-errors_1.c */
+/* 5-errors.c */
 int _eputchar(char);
 int _putfd(char c, int fd);
 void _eputs(char *);
@@ -190,7 +190,7 @@ void set_info(info_t *, char **);
 void clear_info(info_t *);
 void free_info(info_t *, int);
 
-/* -environ.c */
+/* 4-environ.c */
 int _mysetenv(info_t *);
 int _myunsetenv(info_t *);
 char *_getenv(info_t *, const char *);
