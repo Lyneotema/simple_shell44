@@ -8,7 +8,7 @@
 int _erratoi(char *s)
 {
     int i;
-    int value = 0; // Combine the declaration and initialization
+    int value = 0; 
 
     if (*s == '+')
         s++;
