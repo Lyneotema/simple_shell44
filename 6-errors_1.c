@@ -12,7 +12,8 @@ int _erratoi(char *s)
 
 	if (*s == '+')
 		s++;
-        int i;
+
+	int i;
 	for (i = 0; s[i] != '\0'; i++)
 	{
 		if (s[i] >= '0' && s[i] <= '9')
@@ -130,4 +131,5 @@ void remove_comments(char *buf)
 			break;
 	}
 }
+
 
