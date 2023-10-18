@@ -109,13 +109,21 @@ typedef struct builtin
 } builtin_table;
 
 
+<<<<<<< HEAD
 /* 100-shell_loop.c */
+=======
+/* _shell_loop.c */
+>>>>>>> 91722212dad3f4c63bfdcbe5d8fc6550c3fcef6b
 int find_builtin(info_t *);
 void find_cmd(info_t *);
 int hsh(info_t *, char **);
 void fork_cmd(info_t *);
 
+<<<<<<< HEAD
 /* 7-parser.c */
+=======
+/* parsi_n.c */
+>>>>>>> 91722212dad3f4c63bfdcbe5d8fc6550c3fcef6b
 char *dup_chars(char *, int, int);
 int is_cmd(info_t *, char *);
 char *find_path(info_t *, char *, char *);
@@ -123,7 +131,11 @@ char *find_path(info_t *, char *, char *);
 /* hsh.c */
 int loophsh(char **);
 
+<<<<<<< HEAD
 /* 5-errors.c */
+=======
+/* _errors.c */
+>>>>>>> 91722212dad3f4c63bfdcbe5d8fc6550c3fcef6b
 int _eputchar(char);
 int _putfd(char c, int fd);
 void _eputs(char *);
@@ -146,11 +158,19 @@ char *_strncat(char *, char *, int);
 char *_strncpy(char *, char *, int);
 char *_strchr(char *, char);
 
+<<<<<<< HEAD
 /* 8-tokenizer.c */
 char **strtow(char *, char *);
 char **strtow2(char *, char);
 
 /* realloc_44.c */
+=======
+/* token_izer.c */
+char **strtow(char *, char *);
+char **strtow2(char *, char);
+
+/* realloc4.c */
+>>>>>>> 91722212dad3f4c63bfdcbe5d8fc6550c3fcef6b
 void ffree(char **);
 char *_memset(char *, char, unsigned int);
 void *_realloc(void *, unsigned int, unsigned int);
@@ -158,25 +178,41 @@ void *_realloc(void *, unsigned int, unsigned int);
 /* memory_44.c */
 int bfree(void **);
 
+<<<<<<< HEAD
 /* 1-atoi.c */
+=======
+/* atoi_ic.c */
+>>>>>>> 91722212dad3f4c63bfdcbe5d8fc6550c3fcef6b
 int is_delim(char, char *);
 int _isalpha(int);
 int interactive(info_t *);
 int _atoi(char *);
 
+<<<<<<< HEAD
 /* 5-errors.c */
+=======
+/* errors_0.c */
+>>>>>>> 91722212dad3f4c63bfdcbe5d8fc6550c3fcef6b
 int _erratoi(char *);
 int print_d(int, int);
 char *convert_number(long int, int, int);
 void print_error(info_t *, char *);
 void remove_comments(char *);
 
+<<<<<<< HEAD
 /* 3-builtin_1.c */
+=======
+/* built_in.c */
+>>>>>>> 91722212dad3f4c63bfdcbe5d8fc6550c3fcef6b
 int _mycd(info_t *);
 int _myexit(info_t *);
 int _myhelp(info_t *);
 
+<<<<<<< HEAD
 /* 2-builtin.c */
+=======
+/* Built_in0.c */
+>>>>>>> 91722212dad3f4c63bfdcbe5d8fc6550c3fcef6b
 int _myhistory(info_t *);
 int _myalias(info_t *);
 
@@ -190,7 +226,11 @@ void set_info(info_t *, char **);
 void clear_info(info_t *);
 void free_info(info_t *, int);
 
+<<<<<<< HEAD
 /* 4-environ.c */
+=======
+/* _envi_ron.c */
+>>>>>>> 91722212dad3f4c63bfdcbe5d8fc6550c3fcef6b
 int _mysetenv(info_t *);
 int _myunsetenv(info_t *);
 char *_getenv(info_t *, const char *);
@@ -231,5 +271,3 @@ void check_chain(info_t *, char *, size_t *, size_t, size_t);
 int replace_alias(info_t *);
 
 #endif
-
-
